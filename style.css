@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 2fr 3fr 50px;
+    grid-template-columns: 20% auto 20%;
+    /* gap: 2px; */
+}
+
+
+.item {
+    background-color: rgba(48, 162, 255, 0.627);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: url(images/ice:snow.webp);
+    background-size:auto;
+    margin: 10px;
+    align-items: center;
+}
+
+
+#nav {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: rgb(251, 148, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+}
+
+#nav ul {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+#nav ul li {
+    list-style: none;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 1s;
+}
+
+#nav ul li:hover {
+    transform: translate(5px, 25px) rotate(315deg) scale(1,5);
+}
+
+#nav ul li  {
+    text-decoration: none;
+}
+
+#footer {
+    grid-column: span 3;
+    background-color: rgb(251, 148, 44);
+    line-height: 50px;
+    text-align: center;
+}
+
+#hero {
+    grid-column: span 3;
+    background: url(images/icecoldimg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#main {
+    background-color: rgb(255, 231, 201);
+    grid-column: span 2;
+}
+
+#main h2 {
+    margin: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#main p{
+    margin: 10px;
+    font-size: 1em;
+}
+
+#aside {
+    background-color: rgb(151, 121, 85);
+}
+
+#aside h2{
+    margin:20px;
+    align-items: center;
+}
+
+#aside p{
+    margin:20px;
+    align-items: center;
+}
+
+/* media rules */
+
+@media (max-width: 320px) {
+    #main p {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 375px) {
+    #main p {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 425px) {
+    #main p {
+        font-size: 2em;
+    }
+}
+
+button {
+    background-color: rgb(255, 231, 201);
+    border: 1px solid;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+button a{
+    color:rgb(151, 121, 85);
+}
+
+button:hover {
+    background-color: green;
+    transition: color ease-in 1s;
+}
+
+button:hover a{
+    color:orange;
+    transition: color ease-in 1s;
+}
+
+button:active {
+    transform: scale(1.4);
+}
+
+li::before {
+    content:"Browse    ";
+    color: green
+}
+
+#main h2::before {
+    content:"Hi There  ";
+    color:brown;
+}
